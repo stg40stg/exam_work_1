@@ -328,3 +328,55 @@
 	background-color: #c7b299;
 	margin: 0 0 33px 0;
 }*/
+
+.browser{
+	position: relative;
+}
+.browser-header{
+	color: #555555;
+	font-family: raleway-semibold;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin: 0;
+}
+.browser-text{
+	color: #8c8c8c;
+	font-family: montserrat-regular;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 28px;
+	text-align: center;
+	width: 757px;
+	margin: 0;
+}
+.browser-img{
+	width: 770px;
+	height: 482px;
+	background-image: url(img_css/browser-site.png);
+	background-position: center;
+	position: absolute;
+	/*border: 2px solid black;*/
+	right: 30%;
+}
+.browser-img-left{
+	width: 770px;
+	height: 400px;
+	position: absolute;
+	background-image: url(img_css/browser-site-left.png);
+	/*border: 4px solid green;*/
+	z-index: -1;
+	left: 345px;
+	bottom: -485px;
+
+}
+.browser-img-right{
+	width: 770px;
+	height: 400px;
+	position: absolute;
+	background-image: url(img_css/browser-site-right.png);
+	/*border: 2px solid red;*/
+	z-index: -1;
+	left: 805px;
+	bottom: -485px;
+}
