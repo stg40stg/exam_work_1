@@ -79,6 +79,10 @@
 	font-family: raleway-extrabold;
 	src: url(../fonts/raleway-extrabold.ttf)
 }
+@font-face{
+	font-family: raleway-semibold;
+	src: url(../fonts/raleway-semibold.ttf)
+}
 
 .container {
 	width: 1920px;
@@ -264,9 +268,63 @@
 	background-color: #998675;
 }
 .services{
-
+	margin: 80px 0 0 0;
 }
 .services-container{
-	display: flex;
-	justify-content: center;
+	
 }
+.services-figure{
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+  	justify-content: center;
+}
+
+.services-figcap{
+	display: grid;
+	text-align: center;
+	margin:0 34px 0 0;
+}
+.services-figcap:hover{
+	border-bottom: 
+}
+
+.services-svg{
+ 	width: 49px;
+	height: 49px;
+	text-align: center;
+	fill: #747474;
+	margin: 0 0 29px 0;
+}
+.services-svg:hover{
+	fill: #c7b299;
+}
+.services-title{
+	color: #555555;
+	font-family: raleway-semibold;
+	font-size: 22px;
+	font-weight: 400;
+	margin: 0 0 18px 0;
+	
+}
+.services-title:hover{
+	color: #c7b299;
+}
+.services-text{
+	margin: 0;
+	color: #8c8c8c;
+	font-family: montserrat-regular;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	max-width: 266px;
+	
+}
+/*.services-figcap:hover:after {
+  	content: "";
+  	display: block;
+	width: 70px;
+	height: 3px;
+	background-color: #c7b299;
+	margin: 0 0 33px 0;
+}*/
