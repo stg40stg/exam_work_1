@@ -83,6 +83,9 @@
 	font-family: raleway-semibold;
 	src: url(../fonts/raleway-semibold.ttf)
 }
+body{
+	margin: 0 auto;
+}
 
 .container {
 	width: 1920px;
@@ -490,6 +493,7 @@
 }
 .project{
 	width: 100%;
+	margin: 80px 0 0 0;
 }
 .project:after{
 	content: "";
@@ -524,20 +528,15 @@
 }
 .project-menu li{
 	margin: 40px 0 0 0;
+	
 }
-.project-menu li:hover .project-menu li button{
-	background-color: #998675;
 
-}
-.project-menu li:hover .project-menu-btn-text{
-	color: #ffffff;
-}
+
 .project-menu li button{
 	padding: 10px 24px 10px 24px;
 	margin: 0 10px 0 0;
-	background-color: #ffffff;
-	border: none;
-	outline: 1px solid #ebebeb;
+	border: solid 1px transparent;
+   	border-radius: 4px;
 
 }
 .project-menu-btn-text{
@@ -547,4 +546,37 @@
 	font-weight: 300;
 	line-height: 21px;
 }
+.project-menu li button:hover{
+	background: #998675;
+}
+.project-menu li button:hover .project-menu-btn-text{
+	color: #ffffff;
+	
+}
+.project-img{
 
+}
+.project-article{
+
+}
+.project-article-img{
+	width: 370px;
+	height: 237px;
+}
+.project-article-wrapper{
+	display: grid;
+}
+.project-article-header{
+	color: #c7b299;
+	font-family: raleway-regular;
+	font-size: 20px;
+	font-weight: 500;
+}
+.project-article-text{
+	/*color: #d1d1d1;*/
+	color: red;
+	font-family: montserrat-regular;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+}
