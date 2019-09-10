@@ -663,18 +663,43 @@ body{
 	line-height: 23px;
 	text-transform: uppercase;
 }
-.video{
-	width: 1920px;
+#video{
+	position: fixed;
+	width: 100%;
 	height: 705px;
 	position: relative;
+	z-index: 0;
+	object-fit: cover;
+    object-position: center;
+
 }
 .video-content{
-
+	width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-size: 24px;
 }
 .video-img{
 }
 .video-header{
+	width: 382px;
+	height: 22px;
+	color: #ffffff;
+	font-family: raleway-regular;
+	font-size: 30px;
+	font-weight: 500;
 }
 .video-text{
-	
+	width: 552px;
+	height: 43px;
+	color: #ffffff;
+	font-family: montserrat-regular;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 28px;
 }
