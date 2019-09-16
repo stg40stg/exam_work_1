@@ -1221,10 +1221,10 @@ input[type="search"]:focus {
 	color: #c7b299;
 }
 
-@media (min-width: 320px) and (max-width: 605px) {
+@media (min-width: 320px) and (max-width: 480px) {
   	.container {
     	width: 605px;
-    	overflow-y: hidden;
+    	/*overflow-y: hidden;*/
   	}
   	.header{
 		width: 605px;
@@ -1240,7 +1240,7 @@ input[type="search"]:focus {
 		display: none;
 	}
 	.services-figcap{
-		margin: 20px 34px 70px 0;
+		margin: 0 34px 70px 0;
 	}
 	.browser {
 		display: none;
@@ -1264,57 +1264,15 @@ input[type="search"]:focus {
 		width: 605px;
 		height: 705px;
 	}
-	.mobile{
-		width: 605px;
-
-	}
-	.mobile-img{
-		display: none;
-	}
-	.mobile-content{
-		margin: 0 0 0 0;
-		background-image: url(../img/iPhone_in_hand.png);
-		background-repeat: no-repeat;
-	}
-	.mobile-content-list{
-
-	}
 	.counters{
 		display: none;
 	}
 	.post{
 		width: 605px;
-		display: block;
-	}
-	.post-header{
-		margin: 30px 0 0 0;
-	}
-	.post-text{
-		width: 605px;
-		margin: 0 0 0 0;
-	}
-	.post-wrapper{
-		display: block;
-	}
-	.post-content{
-		width: 370px;
-		margin: 0 30px 39px 96px;
-	}
-	.post-btn-wrapper{
-		display: none;
 	}
 	.partner{
 		width: 605px;
-		height: 240px;
-		padding: 0 0 0 0;
-	}
-	.partner-logo{
-		margin:0 0 0 0;
-		margin: 86px 15px 0 38px;
-   		height: 26%;
-	}
-	.post-btn-wrapper{
-		margin: 0 0 0 0;
+		height: 489px;
 	}
 	.footer-content{
 		display: none;
