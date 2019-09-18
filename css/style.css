@@ -208,6 +208,70 @@ input[type="search"]:focus {
 	font-family: montserrat-regular;
 
 }
+.burger{
+	display: flex;
+}
+.burger-stroke {
+     position: relative;
+     display: block;
+     width: 64px;
+     height: 30px;
+    
+     border-top: 9px solid #fff;
+     border-bottom: 9px solid #fff;
+     left: 270px;
+    top: 45px;
+}
+.burger-stroke:before {
+     content: "";
+     position: absolute;
+     top: 10px;
+     left: 0px;
+     width: 100%;
+     border-top: 9px solid #fff;
+}
+.burger input {
+     display: block;
+    width: 57px;
+    height: 50px;
+    position: absolute;
+    top: 42px;
+    left: 490px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    -webkit-touch-callout: none;
+}
+.burger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: #232323;
+  width: 36px;
+  transition: width, 0.5s;
+}
+.burger-menu-elem {
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    margin: -100px 0 0 -60px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #fff;
+    list-style-type: none;
+    transform: translate(-100%, 0%);
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.burger input:checked ~ ul {
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+.burger-menu-elem li {
+  padding: 10px 0;
+  font-size: 30px;
+}
+
+
 .header-section{
 	display: flex;
 	text-align: center;
@@ -1224,7 +1288,8 @@ input[type="search"]:focus {
 @media (min-width: 320px) and (max-width: 605px) {
   	.container {
     	width: 605px;
-    	overflow-y: hidden;
+    	/*overflow-y: hidden;*/
+    	border: 2px solid red;
   	}
   	.header{
 		width: 605px;
@@ -1261,11 +1326,15 @@ input[type="search"]:focus {
 		display: none;
 	}
 	.video{
-		width: 605px;
-		height: 705px;
+		border: 1px solid blue;
+		
+	}
+	.video-poster{
+		object-fit: fill;	
 	}
 	.mobile{
 		width: 605px;
+		border: 1px solid green;
 
 	}
 	.mobile-img{
@@ -1275,9 +1344,28 @@ input[type="search"]:focus {
 		margin: 0 0 0 0;
 		background-image: url(../img/iPhone_in_hand.png);
 		background-repeat: no-repeat;
+		background-size: 180px;
+		height: 465px;
+		width: 605px;
+		background-position-y: bottom;
+		background-position-x: 30px;
+
+	}
+	.mobile-content-title{
+		text-align: center;
+		margin: 20px 0 8px 0;
+	}
+	.mobile-content-text {
+		margin: 0 0 0 0;
+		width: 605px;
+		font-size: 12px;
 	}
 	.mobile-content-list{
-
+		margin: 20px 0 0 209px;
+		
+	}
+	.mobile-content-list li{
+		font-size: 9px;
 	}
 	.counters{
 		display: none;
