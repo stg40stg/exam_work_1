@@ -94,6 +94,7 @@ body{
 .container {
 	width: 1920px;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 .header {
 	width: 1920px;
@@ -208,67 +209,120 @@ input[type="search"]:focus {
 	font-family: montserrat-regular;
 
 }
-.burger{
-	display: flex;
+.content {
+  width: 94%;
+  height: 91%;
+  overflow: hidden;
+  display: none;
 }
-.burger-stroke {
-     position: relative;
-     display: block;
-     width: 64px;
-     height: 30px;
-    
-     border-top: 9px solid #fff;
-     border-bottom: 9px solid #fff;
-     left: 270px;
-    top: 45px;
+.navigation {
+  
+  height: 65px;
 }
-.burger-stroke:before {
-     content: "";
-     position: absolute;
-     top: 10px;
-     left: 0px;
-     width: 100%;
-     border-top: 9px solid #fff;
+
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+    top: 58px;
+    left: 525px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
 }
-.burger input {
-     display: block;
-    width: 57px;
-    height: 50px;
-    position: absolute;
-    top: 42px;
-    left: 490px;
-    cursor: pointer;
-    z-index: 2;
-    opacity: 0;
-    -webkit-touch-callout: none;
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
 }
-.burger input:checked ~ span {
+
+#menuToggle span
+{
+  display: flex;
+  width: 60px;
+  height: 6px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
   opacity: 1;
-  transform: rotate(45deg) translate(0px, 0px);
-  background: #232323;
-  width: 36px;
-  transition: width, 0.5s;
+  transform: rotate(45deg) translate(-20px, -1px);
+  background: #36383F;
 }
-.burger-menu-elem {
-    position: absolute;
-    width: 400px;
-    height: 100vh;
-    margin: -100px 0 0 -60px;
-    padding: 50px;
-    padding-top: 125px;
-    background: #fff;
-    list-style-type: none;
-    transform: translate(-100%, 0%);
-    transform-origin: 0% 0%;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
 }
-.burger input:checked ~ ul {
-  transform: scale(1.0, 1.0);
-  opacity: 1;
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(-10px, -10px);
 }
-.burger-menu-elem li {
-  padding: 10px 0;
-  font-size: 30px;
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 400px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -210px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #F5F6FA;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(170%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  display: none;
+}
+
+#menu li
+{
+  padding: 13px 0;
+  list-style: none;
+  
+}
+#menu li a{
+	text-decoration: none;
+	color: #85888C;
+	font-family: montserrat-regular;
+	font-size: 14px;
+	font-weight: 300;
+}
+.mobile-menu-cart{
+	fill: #85888C;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  display: block;
 }
 
 
@@ -781,6 +835,9 @@ input[type="search"]:focus {
 
 }
 .video-img{
+	width: 70px;
+    height: 70px;
+    padding: 5px 5px 5px 5px;
 	fill: #ffffff;
 	margin: 0 auto;
 	background-image: url(img_css/circle.png);
@@ -789,7 +846,6 @@ input[type="search"]:focus {
 }
 .video-header{
 	width: 382px;
-	
 	color: #ffffff;
 	font-family: raleway-regular;
 	font-size: 30px;
@@ -1285,18 +1341,22 @@ input[type="search"]:focus {
 	color: #c7b299;
 }
 
-@media (min-width: 320px) and (max-width: 605px) {
+@media (max-width: 605px) {
   	.container {
     	width: 605px;
-    	/*overflow-y: hidden;*/
-    	border: 2px solid red;
+    	overflow-y: hidden;
+    	
   	}
   	.header{
 		width: 605px;
 		height: 133px;
 	}
+	
 	.header-logo{
 		margin: 35px 0px 0px 39px;
+	}
+	.content{
+		display: block;
 	}
 	.header-section{
 		display: none;
@@ -1326,7 +1386,7 @@ input[type="search"]:focus {
 		display: none;
 	}
 	.video{
-		border: 1px solid blue;
+		
 		
 	}
 	.video-poster{
@@ -1334,7 +1394,7 @@ input[type="search"]:focus {
 	}
 	.mobile{
 		width: 605px;
-		border: 1px solid green;
+		
 
 	}
 	.mobile-img{
